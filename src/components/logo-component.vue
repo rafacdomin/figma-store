@@ -167,6 +167,4 @@
 
 <script setup>
 const { random } = defineProps(['random'])
-
-console.log(random)
 </script>

@@ -1,12 +1,13 @@
 <template>
-  <div class="relative overflow-hidden">
-    <div class="flex">
+  <div class="">
+    <div class="flex border-b-4 border-black [&>*]:stroke-black [&>*]:stroke-[4]">
       <div>
         <a href="/products/version-history-coach-jacket">
           <div>Version history coach jacket</div>
 
           <div>
             <svg
+              class="stroke-black stroke-[4]"
               width="1124"
               height="612"
               viewBox="0 0 1124 612"
@@ -445,7 +446,7 @@
       </button>
     </div>
 
-    <a class="absolute z-10 bottom-[-20px]" href="/pages/about">
+    <a class="absolute z-10 bottom-[15%] right-[10%]" href="/pages/about">
       <svg
         width="171"
         height="171"
@@ -590,7 +591,7 @@
           stroke-width="4"
           stroke-linecap="square"
         ></path>
-        <g class="highfive">
+        <g class="highfive opacity-0 transition-all transition-1000">
           <path
             class="sparks"
             d="M107.598 46.4583L103.493 57.7346"
@@ -628,3 +629,46 @@
 <script setup>
 // 316446594
 </script>
+
+<style scoped>
+.badge:hover * {
+  opacity: 1;
+}
+
+.badge:hover .hand {
+  transform: translateX(-10px);
+}
+
+.badge:hover .highfive {
+  transform: translate(-3px, -3px);
+  transition: all 0.3s ease;
+}
+
+.hand {
+  transition: transform 0.3s ease;
+}
+
+.sparks {
+  opacity: 0;
+  transition: all 0.3s ease 0.2s;
+}
+
+.animation--rotate {
+  animation: rotate 10s linear 0s infinite;
+  -webkit-animation: rotate 10s linear 0s infinite;
+  transform-origin: center center;
+  -webkit-transform-origin: center center;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(1turn);
+    -webkit-transform: rotate(1turn);
+  }
+}
+</style>
